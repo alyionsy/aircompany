@@ -1,16 +1,15 @@
-package Planes;
+package entity.plane;
 
-import models.MilitaryType;
+import entity.type.MilitaryType;
 
 import java.util.Objects;
 
-public class MilitaryPlane extends Plane{
-
+public class MilitaryPlane extends Plane {
     private MilitaryType type;
 
-    public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType type) {
+    public MilitaryPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, MilitaryType militaryType) {
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
-        this.type = type;
+        this.type = militaryType;
     }
 
     public MilitaryType getType() {
@@ -21,7 +20,7 @@ public class MilitaryPlane extends Plane{
     public String toString() {
         return super.toString().replace("}",
                 ", type=" + type +
-                '}');
+                        '}');
     }
 
     @Override
