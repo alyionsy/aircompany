@@ -42,7 +42,7 @@ public class AirportTest {
     }
 
     @Test
-    public void testGetPassengerPlaneWithMaxCapacity() {
+    public void testGetPassengerPlaneWithMaxPassengerCapacity() {
         Assert.assertEquals(new PassengerPlane("Boeing-747", 980, 16100, 70500, 242), new Airport(planes).getPassengerPlaneWithMaxPassengersCapacity());
     }
 
