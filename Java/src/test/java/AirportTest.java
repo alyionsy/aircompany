@@ -47,13 +47,6 @@ public class AirportTest {
     }
 
     @Test
-    public void testSortByMaxLoadCapacity() {
-        List<? extends Plane> sortedPlanes = new Airport(planes).sortByMaxLoadCapacity().getPlanes();
-        sortedPlanes.sort(comparing(Plane::getMaxLoadCapacity, reverseOrder()));
-        Assert.assertEquals(sortedPlanes, new Airport(planes).sortByMaxLoadCapacity().getPlanes());
-    }
-
-    @Test
     public void testHasAtLeastOneBomberInMilitaryPlanes() {
         Assert.assertTrue(new Airport(planes).getBomberMilitaryPlanes().stream()
                 .anyMatch(militaryPlane -> militaryPlane.getType() == MilitaryType.BOMBER));
